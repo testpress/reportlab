@@ -867,7 +867,9 @@ class toColor:
             return HexColor(arg)
         except:
             if default is None:
-                raise ValueError('Invalid color value %r' % arg)
+            #Commented by DP. To handle initial color
+                #raise ValueError('Invalid color value %r' % arg)
+                return HexColor('#FFFFFF')
             return default
 
 toColor = toColor()
